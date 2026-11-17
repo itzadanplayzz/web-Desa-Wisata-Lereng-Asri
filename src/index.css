@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --surface-canvas: #fcf9f0;
+    --surface-low: #f6f3ea;
+    --surface-container: #f1eee5;
+    --surface-card: #ffffff;
+    --forest-primary: #1b4d3e;
+    --forest-deep: #003629;
+    --terracotta: #954a17;
+    --terracotta-warm: #c26d38;
+    --whatsapp-solid: #0f7a3e;
+    --whatsapp-hover: #0b6332;
+    --ink-primary: #1c1c17;
+    --ink-secondary: #404945;
+    --hairline: rgba(27, 77, 62, 0.12);
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--surface-canvas);
+    color: var(--ink-primary);
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
